@@ -1,2 +1,7 @@
-# MathDataWorkshop
-Organisation and materials for the math data workshop in Cernay, August 2019
+# Math Data Workshop
+
+## Things to figure out
+
+### Interface
+
+- Choosing collections (defaults?), columns displayed by default
