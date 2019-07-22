@@ -1,5 +1,9 @@
 # Math Data Workshop
 
+## Bring to the workshop
+
+- A few power strips
+
 ## Things to do or figure out
 
 ### Datasets
