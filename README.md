@@ -34,7 +34,10 @@ Initial assignments:
 
 ### Interface
 
-- Choosing collections (defaults?), columns displayed by default
+- Choosing collections (defaults?), choosing columns displayed by default
+- Support the filter box with autocomplete-type search (in case there are many)
+- Usability: intro tour of the interface (see [intro.js](https://introjs.com/)), pop-up definitions
+- Out there: new graphic image and/or colour scheme to integrate with MathHub?
 
 #### Computer algebra system integration
 
