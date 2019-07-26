@@ -1,5 +1,7 @@
 # Math Data Workshop
 
+[Nicolas' notes](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
+
 ## Bring to the workshop
 
 - A few power strips
