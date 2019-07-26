@@ -50,6 +50,7 @@ Legend:
 * ***(v)***: (known/prefers) vegetarian/vegan
 * ***[person]***: room sharing or similar
 
+Participants:
 * Odile Bénassy? [probably Katja]
 * Katja Berčič (v, no mushrooms) [probably Odile]
 * E. Madison Bray
