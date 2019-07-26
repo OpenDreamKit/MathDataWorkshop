@@ -23,7 +23,8 @@
 #### Other
 
 - Connect the small groups with [Group Names](https://people.maths.bris.ac.uk/~matyd/GroupNames/index.html) and the [Group Explorer](https://nathancarter.github.io/group-explorer/GroupExplorer.html).
-- How to deal with [](https://gitlab.com/mathzeta2/zetalib/blob/master/zetalib/p-adic-examples.json)
+- How to deal with the above in general way, (so that the below can also be handled) so that we can add such things without too much work
+- How to deal with [p-adic](https://gitlab.com/mathzeta2/zetalib/blob/master/zetalib/p-adic-examples.json)
 
 ### Interface
 
@@ -31,5 +32,5 @@
 
 #### Computer algebra system integration
 
-- How to do it?
+- How to do it? - MitM
 - Sage explorer connection?
