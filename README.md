@@ -5,6 +5,7 @@
 ## Bring to the workshop
 
 - A few power strips
+- Scrap paper
 
 ## Things to do or figure out
 
