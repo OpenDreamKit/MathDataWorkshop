@@ -2,10 +2,12 @@
 
 [Nicolas' notes](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
 
+Sheets and towels should be there. Bring toiletries!
+
 ## Bring to the workshop / Preparations
 
 - Transfer data to server pre-workshop (the internet access will not support transfering large amounts of data)
-- Fresh food for Saturday and Sunday
+- Fresh food for Saturday and Sunday (Samuel and Katja)
 - A few power strips
 - Scrap paper
 
