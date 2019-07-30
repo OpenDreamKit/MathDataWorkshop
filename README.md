@@ -2,8 +2,10 @@
 
 [Nicolas' notes](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
 
-## Bring to the workshop
+## Bring to the workshop / Preparations
 
+- Transfer data to server pre-workshop (the internet access will not support transfering large amounts of data)
+- Fresh food for Saturday and Sunday
 - A few power strips
 - Scrap paper
 
