@@ -68,7 +68,7 @@ Participants:
 * Jukka Kohonen
 * Samuel Lelièvre (v)
 * Florian Rabe
-* Julian Rüth? [tent?]
+* Julian Rüth [tent]
 * Nicolas Thiéry [tent]
 * Michael Torpey
 * Tom Wiesing
