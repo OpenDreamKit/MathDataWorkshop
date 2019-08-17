@@ -8,6 +8,11 @@
 
 Sheets and towels should be there. Bring toiletries!
 
+#### TODO for Saturday morning
+
+* Move food to La Tour
+* Move one of the two white cutting boards from Le Roi Soleil to Le Petit Prince
+
 ## Bring to the workshop / Preparations
 
 - Transfer data to server pre-workshop (the internet access will not support transfering large amounts of data)
