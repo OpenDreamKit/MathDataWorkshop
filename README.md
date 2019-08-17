@@ -4,6 +4,8 @@
 
 [Arrivals and departures](https://hackmd.io/HR0KV8IJT2qlAOqRBhqW6A)
 
+[Food planning](https://hackmd.io/XC6rJLLiThWVMjXM7wF-XQ)
+
 Sheets and towels should be there. Bring toiletries!
 
 ## Bring to the workshop / Preparations
