@@ -1,6 +1,8 @@
 # Math Data Workshop
 
-[Nicolas' notes](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
+[Nicolas' notes on logistics](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
+
+[Arrivals and departures](https://hackmd.io/HR0KV8IJT2qlAOqRBhqW6A)
 
 Sheets and towels should be there. Bring toiletries!
 
