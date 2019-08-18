@@ -36,6 +36,7 @@ Sheets and towels should be there. Bring toiletries!
 2. Write schema theories
 3. Formalize relevant math
 4. Import into
+5. Provenance
 
 Initial assignments:
 - 1: Gabe, Jukka, Katja
@@ -48,6 +49,7 @@ Initial assignments:
 - How to deal with the above in general way, (so that the below can also be handled) so that we can add such things without too much work - Florian?
 - How to deal with [p-adic](https://gitlab.com/mathzeta2/zetalib/blob/master/zetalib/p-adic-examples.json)
 - Come up with a good name for the fourth kind of mathematical data (previously known as concrete/relational/...)
+- Think about recording provenance
 
 ### Interface
 
