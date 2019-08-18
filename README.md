@@ -50,6 +50,7 @@ Initial assignments:
 - How to deal with [p-adic](https://gitlab.com/mathzeta2/zetalib/blob/master/zetalib/p-adic-examples.json)
 - Come up with a good name for the fourth kind of mathematical data (previously known as concrete/relational/...)
 - Think about recording provenance
+- Think about a journal of math datasets
 
 ### Interface
 
@@ -62,6 +63,10 @@ Initial assignments:
 
 - How to do it? - MitM
 - Sage explorer connection?
+
+## Links
+
+- You can help with the [survey of math datasets](https://mathdb.mathhub.info/)!
 
 ## Participants
 
