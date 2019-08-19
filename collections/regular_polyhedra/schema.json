@@ -1,0 +1,51 @@
+{
+    "displayName": "Regular Polyhedra",
+    "slug": "polyhedra",
+    "properties": [
+        {
+            "slug": "schlafli",
+            "displayName": "Schläfli Symbol",
+            "codec": vector/pair nonzero positive numbers
+        },
+        {relators (probably string, you typically don't want to search)
+            "slug": "relators",
+            "displayName": "Characterising Relators",
+            "codec": string
+        },
+        {rank (small number)
+            "slug": "rank",
+            "displayName": "Rank",
+            "codec": "StandardInt"
+        },
+        {size of group (at most number of flags, same for regular)
+            "slug": "group_size",
+            "displayName": "Group Size",
+            "codec": "StandardInt"
+        },
+        {f-vector (face vector), array of numbers
+            "slug": "f_vector",
+            "displayName": "f-vector",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "orientable",
+            "displayName": "Orientable",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "polytope",
+            "displayName": "Polytope",
+            "codec": "StandardBool"
+        },
+        {small group id
+            "slug": "small_group_id",
+            "displayName": "Small Group ID",
+            "codec": pair of integers
+        },
+        {dual
+            "slug": "dual",
+            "displayName": "Dual",
+            "codec": string (schlafli+relators)
+        }
+    ]
+}
