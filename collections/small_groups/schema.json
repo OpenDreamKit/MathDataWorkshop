@@ -1,0 +1,51 @@
+{
+    "displayName": "Small Groups Library (up to order 1023)",
+    "slug": "smallgp",
+    "properties": [
+        {
+            "slug": "order",
+            "displayName": "Order",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "id",
+            "displayName": "Small Group ID",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "abelian",
+            "displayName": "Abelian",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "nilpotent",
+            "displayName": "Nilpotent",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "supersolvable",
+            "displayName": "SupersolvableGrou",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "solvable",
+            "displayName": "Solvable",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "lg_length",
+            "displayName": "Polytope",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "frattini_factor",
+            "displayName": "FrattiniFactor",
+            "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "structure_description",
+            "displayName": "Structure Description",
+            "codec": "StandardJSON"
+        }
+    ]
+}
