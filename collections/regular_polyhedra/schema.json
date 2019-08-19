@@ -25,7 +25,7 @@
         {f-vector (face vector), array of numbers
             "slug": "f_vector",
             "displayName": "f-vector",
-            "codec": "StandardBool"
+            "codec": List of StandardInt
         },
         {
             "slug": "orientable",
@@ -37,15 +37,10 @@
             "displayName": "Polytope",
             "codec": "StandardBool"
         },
-        {small group id
+        {small group id (not present for all groups)
             "slug": "small_group_id",
             "displayName": "Small Group ID",
-            "codec": pair of integers
-        },
-        {dual
-            "slug": "dual",
-            "displayName": "Dual",
-            "codec": string (schlafli+relators)
+            "codec": optional pair of integers
         }
     ]
 }
