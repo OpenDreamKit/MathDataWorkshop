@@ -1,5 +1,7 @@
 # Math Data Workshop
 
+This file covers the organisational notes. For work-related notes see the file [WorkNotes.md](https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/WorkNotes.md)
+
 [Nicolas' notes on logistics](https://hackmd.io/4b8zBeKLS6i9w84G0ChanA?view)
 
 [Arrivals and departures](https://hackmd.io/HR0KV8IJT2qlAOqRBhqW6A)
