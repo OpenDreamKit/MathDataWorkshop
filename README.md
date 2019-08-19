@@ -52,6 +52,22 @@ Initial assignments:
 - Think about recording provenance
 - Think about a journal of math datasets
 
+### Datatypes and Codecs
+
+Our MDDL (math data description language) defines two kinds of objects:
+* datatypes specify types using their mathematical properties, such as
+  ** basic types: integers, rationals, booleans, etc.
+  ** collection types: vectors, matrices, finite sets, multisets, etc.
+  ** higher mathematical types: polynomials, rings, etc.
+ * codecs specify translations (and back) from datatypes to primitive types supported by databases, such as
+  ** integers as strings, integers as lists of base 2^64 digits, etc.
+  ** sparse vector codec (i.e., vectors as sparse lists), taking a codec for the entries as an argument
+
+The datatypes are formally specified and the codecs are named and documented in the file https://gl.mathhub.info/ODK/discretezoo/blob/master/source/MDDL.mmt
+
+This file serves as the reference for our implementations.
+It will probably be extended substantially during the course of the workshop.
+
 ### Interface
 
 - Choosing collections (defaults?), choosing columns displayed by default
