@@ -1,5 +1,10 @@
 # Notes on work-related things
 
+## Links
+
+- the [list of codecs](https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/CodecList.md)
+- You can help with the [survey of math datasets](https://mathdb.mathhub.info/)!
+
 ### Datasets
 
 #### List of target datasets
@@ -57,7 +62,3 @@ It will probably be extended substantially during the course of the workshop.
 
 - How to do it? - MitM
 - Sage explorer connection?
-
-## Links
-
-- You can help with the [survey of math datasets](https://mathdb.mathhub.info/)!
