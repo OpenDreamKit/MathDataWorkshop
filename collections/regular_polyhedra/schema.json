@@ -5,27 +5,27 @@
         {
             "slug": "schlafli",
             "displayName": "Schläfli Symbol",
-            "codec": vector/pair nonzero positive numbers
+            "codec": "ListAsArray_StandardInt"
         },
-        {relators (probably string, you typically don't want to search)
+        {
             "slug": "relators",
             "displayName": "Characterising Relators",
-            "codec": string
+            "codec": "ListAsArray_StandardJSON"
         },
-        {rank (small number)
+        {
             "slug": "rank",
             "displayName": "Rank",
             "codec": "StandardInt"
         },
-        {size of group (at most number of flags, same for regular)
+        {
             "slug": "group_size",
             "displayName": "Group Size",
             "codec": "StandardInt"
         },
-        {f-vector (face vector), array of numbers
+        {
             "slug": "f_vector",
             "displayName": "f-vector",
-            "codec": List of StandardInt
+            "codec": "ListAsArray_StandardInt"
         },
         {
             "slug": "orientable",
@@ -37,10 +37,10 @@
             "displayName": "Polytope",
             "codec": "StandardBool"
         },
-        {small group id (not present for all groups)
+        {
             "slug": "small_group_id",
             "displayName": "Small Group ID",
-            "codec": optional pair of integers
+            "codec": "ListAsArray_StandardInt"
         }
     ]
 }
