@@ -1,0 +1,31 @@
+{
+    "displayName": "Additive Bases",
+    "slug": "ab",
+    "properties": [
+        {
+            "slug": "basis",
+            "displayName": "Basis",
+            "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "k",
+            "displayName": "Size",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "n",
+            "displayName": "Range",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "S",
+            "displayName": "Symmetric",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "R",
+            "displayName": "Restricted",
+            "codec": "StandardBool"
+        }
+    ]
+}
