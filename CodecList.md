@@ -24,3 +24,7 @@
 * finitely presented groups
 * named groups
 * incompleteness (minimal set, an example that exists but might not be minimal)
+
+## Figure out nice opaque
+
+* relator (word composed of Coxeter string group generators rho_i (well known in community))
