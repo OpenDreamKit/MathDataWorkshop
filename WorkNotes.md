@@ -2,7 +2,7 @@
 
 ## Links
 
-- the [list of codecs](https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/CodecList.md)
+- [List of codecs](https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/CodecList.md). For more information, see the section on Datatypes and Codecs below.
 - You can help with the [survey of math datasets](https://mathdb.mathhub.info/)!
 
 ### Datasets
