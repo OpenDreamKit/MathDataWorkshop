@@ -1,7 +1,33 @@
 User stories -- Gabe Cunningham
 
-For the past 6 years, many of my projects have been inspired by working with data on abstract polytopes. Typically, I will have a question in mind -- ``For which values of p and q is there a regular polyhedron with q p-gonal faces and p q-valent vertices?'' -- and then I will consult some combination of the Atlas of Small Regular Polytopes (http://atlas.dr-mikes-maths.com/atlas/index.html) and various lists of data available on Marston Conder's website (https://www.math.auckland.ac.nz/~conder/). I collect a list of polytopes that satisfy the desired properties and look for interesting patterns. For example, for the question mentioned above, I found that whenever p was odd, it seemed that q had to be an even divisor of 2p. There is typically enough data to make confident conjectures, and then the next step becomes actually finding a way of proving (or disproving!) these conjectures.
+For the past 6 years, many of my projects have been inspired by working with data on abstract polytopes. 
+Typically, I will have a question in mind -- ``For which values of p and q is there a regular polyhedron
+with q p-gonal faces and p q-valent vertices?'' -- and then I will consult some combination of the Atlas
+of Small Regular Polytopes (http://atlas.dr-mikes-maths.com/atlas/index.html) and various lists of data
+available on Marston Conder's website (https://www.math.auckland.ac.nz/~conder/). I collect a list of
+polytopes that satisfy the desired properties and look for interesting patterns. For example, for the
+question mentioned above, I found that whenever p was odd, it seemed that q had to be an even divisor
+of 2p. There is typically enough data to make confident conjectures, and then the next step becomes
+actually finding a way of proving (or disproving!) these conjectures.
 
-I have several papers related to the above question where I used ad-hoc data analysis: see "Tight orientably-regular polytopes", "Classification of tight regular polyhedra", and "Tight chiral polyhedra". Eventually I decided that I needed a more robust method of querying the data. I took one of Marston Conder's freely available datasets (of regular polyhedra with up to 2000 flags), and I put it into a form that I could work with interactively in GAP. I pre-computed several properties and created an interface for reading and writing my list of polytopes to a text file. Now I can easily query the data in GAP -- for example, I can ask for all regular polyhedra with 11 vertices and up to 2000 flags. With coauthor Mark Mixer, we found that for primes p > 3, there seemed to be exactly two regular polyhedra with p vertices, both of which were polyhedra I had encountered before when working with tight polyhedra. If I had not created my own personal method for querying the data, I estimate that it would have taken me 8 hours of tedious work to go through the Atlas of Small Regular Polytopes and determine which regular polyhedra had a prime number of vertices. I'm not sure if I would have even bothered.
+I have several papers related to the above question where I used ad-hoc data analysis: see "Tight 
+orientably-regular polytopes", "Classification of tight regular polyhedra", and "Tight chiral polyhedra". 
+Eventually I decided that I needed a more robust method of querying the data. I took one of Marston Conder's
+freely available datasets (of regular polyhedra with up to 2000 flags), and I put it into a form that I 
+could work with interactively in GAP. I pre-computed several properties and created an interface for reading
+and writing my list of polytopes to a text file. Now I can easily query the data in GAP -- for example, I 
+can ask for all regular polyhedra with 11 vertices and up to 2000 flags. With coauthor Mark Mixer, we found
+that for primes p > 3, there seemed to be exactly two regular polyhedra with p vertices, both of which were
+polyhedra I had encountered before when working with tight polyhedra. If I had not created my own personal
+method for querying the data, I estimate that it would have taken me 8 hours of tedious work to go through
+the Atlas of Small Regular Polytopes and determine which regular polyhedra had a prime number of vertices.
+I'm not sure if I would have even bothered.
 
-In the community of researchers of abstract polytopes and related structures, there is a deep need for a searchable database with polytopes. I have had several conversations that start with someone asking ``What is the smallest polytope with properties A, B, and C?'' At the moment, you just have to hope you ask the right person. Having a facility for exploring the data that we have on regular polytopes would allow rapid testing of various hypotheses, and it would help act as a gateway for new researchers entering the field. It would also encourage the development of more datasets. There are several fairly straightforward datasets that could be developed, and I think the main reason they have not yet been created is that hosting and organizing the data represents a significant hurdle.
+In the community of researchers of abstract polytopes and related structures, there is a deep need for a 
+searchable database with polytopes. I have had several conversations that start with someone asking ``What is
+the smallest polytope with properties A, B, and C?'' At the moment, you just have to hope you ask the right 
+person. Having a facility for exploring the data that we have on regular polytopes would allow rapid testing 
+of various hypotheses, and it would help act as a gateway for new researchers entering the field. It would 
+also encourage the development of more datasets. There are several fairly straightforward datasets that could 
+be developed, and I think the main reason they have not yet been created is that hosting and organizing the 
+data represents a significant hurdle.
