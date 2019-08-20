@@ -8,6 +8,11 @@
             "codec": "ListAsArray_StandardInt"   // This should represent a graph
         },
         {
+            "slug": "name",
+            "displayName": "Common name",
+            "codec": "StandardString"
+        },
+        {
             "slug": "n",
             "displayName": "size",
             "codec": "StandardInt"
@@ -63,14 +68,14 @@
             "codec": "StandardBool"
         }
         {
-            "slug": "isselfdual",
-            "displayName": "is self-dual",
+            "slug": "isdeco",
+            "displayName": "is vertically decomposable",
             "codec": "StandardBool"
         }
         {
-            "slug": "dual",
-            "displayName": "dual lattice",
-            "codec": "???"     // I need to tell what is the dual 
+            "slug": "isselfdual",
+            "displayName": "is self-dual",
+            "codec": "StandardBool"
         }
     ]
 }
@@ -94,5 +99,11 @@
 // (= turn it upside down), but it might not be in the same collection.
 // Eg. I have a collection of semimodular lattices. Their duals need
 // not be semimodular so they are not in that collection.
+//
+// Something like
+//        {
+//            "slug": "dual",
+//            "displayName": "dual lattice",
+//            "codec": "???"
+//        }
 
- 
