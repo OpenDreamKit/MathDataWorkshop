@@ -1,0 +1,46 @@
+{
+    "displayName": "Regular Maniplexes",
+    "slug": "maniplexes",
+    "properties": [
+        {
+            "slug": "schlafli",
+            "displayName": "Schläfli Symbol",
+            "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "relators",
+            "displayName": "Characterising Relators",
+            "codec": "ListAsArray_StandardJSON"
+        },
+        {
+            "slug": "rank",
+            "displayName": "Rank",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "group_size",
+            "displayName": "Group Size",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "f_vector",
+            "displayName": "f-vector",
+            "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "orientable",
+            "displayName": "Orientable",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "polytope",
+            "displayName": "Polytope",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "small_group_id",
+            "displayName": "Small Group ID",
+            "codec": "ListAsArray_StandardInt"
+        }
+    ]
+}
