@@ -1,6 +1,7 @@
 {
     "displayName": "Additive Bases",
     "slug": "ab",
+    "description": "This is the full collection of extremal additive bases of up to $25$ elements. ",
     "properties": [
         {
             "slug": "basis",
