@@ -1,6 +1,7 @@
 {
     "displayName": "Small Groups Library (up to order 1023)",
     "slug": "smallgp",
+    "description": "Description TBD", 
     "properties": [
         {
             "slug": "order",

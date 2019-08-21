@@ -1,6 +1,7 @@
 {
     "displayName": "Lattices",
     "slug": "lat",
+    "description": "Description TBD",  
     "properties": [
         {
             "slug": "covering",

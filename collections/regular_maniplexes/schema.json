@@ -1,6 +1,7 @@
 {
     "displayName": "Regular Maniplexes",
     "slug": "maniplexes",
+    "description": "tbd",
     "properties": [
         {
             "slug": "schlafli",

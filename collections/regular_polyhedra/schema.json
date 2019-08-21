@@ -1,6 +1,7 @@
 {
     "displayName": "Regular Polyhedra",
     "slug": "polyhedra",
+    "description": "tbd",
     "properties": [
         {
             "slug": "schlafli",
