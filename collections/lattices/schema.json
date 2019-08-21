@@ -5,7 +5,7 @@
         {
             "slug": "covering",
             "displayName": "Covering relation",
-            "codec": "ListAsArray_StandardInt"   // This should represent a graph
+            "codec": "StandardString"
         },
         {
             "slug": "name",
@@ -72,38 +72,5 @@
             "displayName": "is vertically decomposable",
             "codec": "StandardBool"
         }
-        {
-            "slug": "isselfdual",
-            "displayName": "is self-dual",
-            "codec": "StandardBool"
-        }
     ]
 }
-
-
-// question 1:
-// representation of the directed graph: perhaps as a list of lists?
-// Elements of the lattice are numbered 1 to n.
-// Then for each element, tell what are its "parents" (covering elements).
-
-// question 2:
-// We have several different collections of lattices.
-// The underlying type of object is the same ("a lattice").
-// Should we use the same schema and different data files, or how?
-// Or just one huge data file that contains all lattices we know of?
-
-// question 3:
-// How to encode relations between objects?
-// "This lattice is the dual of that lattice"
-// Note: For any lattice, there is always THE dual lattice
-// (= turn it upside down), but it might not be in the same collection.
-// Eg. I have a collection of semimodular lattices. Their duals need
-// not be semimodular so they are not in that collection.
-//
-// Something like
-//        {
-//            "slug": "dual",
-//            "displayName": "dual lattice",
-//            "codec": "???"
-//        }
-
