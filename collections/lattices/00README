@@ -1,0 +1,11 @@
+lat.combined.json contains the following collections combined:
+
+(1) all vertically-indecomposable modular lattices of sizes 4...20
+(2) all vertically-indecomposable semimodular lattices of sizes 4...17
+(3) all vertically-indecomposable graded lattices of sizes 4...14
+(4) all vertically-indecomposable geometric lattices of sizes 4...34
+
+e-mail jukka.kohonen@aalto.fi in case of any trouble
+
+more lattices available by request.
+if we take vertically-indecomposable graded lattices of size 21, we have 11 658 925 558 of them
