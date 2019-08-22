@@ -1,0 +1,109 @@
+
+Provenance sketch for
+[Full list of unlabeled modular vi-lattices     of sizes 4...30]
+[Full list of unlabeled semimodular vi-lattices of sizes 4...25]
+[Full list of unlabeled geometric vi-lattices   of sizes 4...34]
+[Full list of unlabeled graded vi-lattices      of sizes 4...21]
+
+Jukka Kohonen 22.8.2019
+
+
+1. Theory behind the data
+
+MSC2010 classification:
+06C05   	Modular lattices, Desarguesian lattices
+06C10   	Semimodular lattices, geometric lattices
+
+Standard references
+https://www.encyclopediaofmath.org/index.php/Modular_lattice
+https://www.encyclopediaofmath.org/index.php/Semi-modular_lattice
+
+[Definitions of lattice, modular, semimodular, geometric, graded,
+ vertically indecomposable]
+
+Representation:
+A finite lattice is succintly represented by a GRAPH that corresponds
+to its covering relation (= which elements cover which elements).
+An n-element lattice corresponds to an n-vertex graph.
+
+Labeled vs unlabeled:
+
+If the elements are labeled with distinct labels, for example integers
+1...n, we say we have a "labeled lattice".
+
+If we remove the labels but retain the structure, we say we have an
+"unlabeled lattice".  Mathematically, an unlabeled lattice is an
+ISOMORPHISM CLASS of labeled lattices.  An isomorphism is a bijection
+between two lattices (their elements) that retains the lattice
+relation $\le$, or equivalently retains the edges of the covering
+graph.
+
+Practically, we represent an unlabeled lattice by showing a labeled
+lattice that belongs to the isomorphism class.  This leads to the
+graph isomorphism problem: given a two labeled lattices, do they
+represent the same unlabeled lattice?  Typical solution is to define a
+CANONICAL representative of the unlabeled lattice (e.g. by a
+algorithm/program such as nauty, bliss, or by some direct mathematical
+definition).  The problem is nontrivial but can be handled practically.
+
+
+2. Process of generating the current data
+
+Search algorithm described in Kohonen (2018)
+https://doi.org/10.1007/s11083-018-9475-2
+
+Implemented in C by JK
+Program code available in EUDAT B2SHARE
+https://b2share.eudat.eu/records/dbb096da4e364b5e9e37b982431f41de
+Requires the nauty libraries
+
+Program was run on a single single 2.6 GHz Intel Xeon E5-2690 core.
+Memory requirement was large [... GB, only roughly reported in article]
+
+Running time:
+e.g. for modular lattices, empirically approx proportional to 2.8^n.
+For size n=30 it was 79661.32 seconds
+For other types and sizes ...
+
+
+Reproducibility:
+Given the program code, it is easy to rerun the program if you have
+the computing power available. The program is deterministic so you
+will have identical results every time.
+
+
+3. Discussion of the validity of the data
+
+[Discussed in some detail the original article!]
+
+3.1 Validity of each object
+Verifying that a given object is indeed a [vertically indecomposable
+modular lattice of 30 elements] is relatively easy, although you do
+need to check a considerable number of relations between the elements.
+But doing it with a computer is a matter of microseconds.
+
+3.2 Completeness of listing
+Verifying that our list is COMPLETE is difficult. Basically you have
+to trust the algorithm, implementation and computer. However there
+are several consistency checks (see article), and also the results
+can be compared to other published results (see article).
+
+3.3 Uniqueness of objects in listing
+Verifying that each unlabeled [lattice of some type] is listed only
+ONCE in our listing is not trivial, but can be done. Basically it is
+the graph isomorphism problem (make all lattices canonical and check
+there are no duplicates).
+
+
+
+5. Other pointers
+
+Counts of the lattices in OEIS
+
+https://oeis.org/A006981 modular lattices
+https://oeis.org/A229202 semimodular lattices
+https://oeis.org/A281574 geometric lattices
+https://oeis.org/A278691 graded lattices
+
+
+
