@@ -1,0 +1,102 @@
+
+Provenance sketch for
+[Full list of optimal additive bases of sizes from 1 to 25]
+Jukka Kohonen 22.8.2019
+
+
+1. Theory behind the data
+
+MSC2010 classification:
+11B13   	Additive bases, including sumsets
+
+1.1 generic:
+An additive basis is [link to definition in sTeX]
+
+NOTE: This is a very generic definition. Both the basis and the target set
+could be infinite (cf. Goldbach conjecture: primes and even integers)
+and the elements might not be integers (e.g. they could be points in
+the plane, Kohonen-Koivunen-Rajamäki 2018)
+
+1.2 more specific:
+Here we talk about additive bases that
+* are finite (have k elements, where k is positive integer)
+* have nonnegative integers as elements
+* whose order is 2   [= taking sums of 2 elements]
+* whose target set is an interval of nonnegative integers [0,n]
+
+1.3 even more specific:
+An OPTIMAL additive basis [of our current type] is one that,
+for a given size, has the longest target interval.
+
+NOW se have a specific mathematical question that our data answers:
+Given integer k, WHAT are the optimal additive bases [of our type]?
+
+
+2. Process of generating the current data
+
+Search algorithm described in Kohonen & Corander (2014)
+Implemented in C by JK
+Program code available by request from author [SHOULD BE made public]
+Program is standalone, no extra libraries needed
+
+Program was run in parallel on 2.6 GHz AMD Opteron processes,
+on CSC/Finland computer cluster
+Memory requirement was small [... MB, did not originally report it]
+
+Running time: for k=25 it was 606 days [reported in article].
+For smaller k it is faster [not reported in article]
+
+
+
+
+Reproducibility:
+Given the program code, it is easy to rerun the program if you have
+the computing power available. The program is deterministic so you
+will have identical results every time.
+
+
+3. Discussion of the validity of the data
+
+[Not discussed in the original article!]
+
+Suppose k=25 (number of elements) is given.  If we are given an
+additive basis of k=25 elements, it is easy to compute its target set
+(set of pairwise sums).
+
+EASY to verify {0,1,3,4,...,103,105,106} is an additive basis for
+[0,212].
+
+DIFFICULT to verify that there are no 25-element bases that have
+greater range of the target interval.  Basically have to rerun the
+program and
+
+* trust that the algorithm & implementation are correct
+* the machine works
+
+so that we did not miss anything.
+
+It is difficult to think of a succint "certificate" of the correctness
+in this problem.
+
+Imaginable errors in the data: If the program or the run was incorrect,
+there could be bases that have GREATER range.
+
+
+4. Bibliography
+
+* Problem statement due to Rohrbach (1937), ref
+* Earlier data listings due to e.g.
+  up to k=6 by Stöhr (1955), ref
+  up to k=8 by Riddell (1960), ref
+  ...
+  up to k=24 by Challis & Robinson (2013), ref
+  up to k=25 by Kohonen & Corander (2014), ref
+
+* Other known results, background theory in e.g.
+  ....
+
+
+5. Other pointers
+
+Target length for each k given in OEIS sequence A001212
+
