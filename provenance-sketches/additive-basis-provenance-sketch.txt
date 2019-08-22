@@ -9,6 +9,12 @@ Jukka Kohonen 22.8.2019
 MSC2010 classification:
 11B13   	Additive bases, including sumsets
 
+Standard references
+https://www.encyclopediaofmath.org/index.php/Additive_basis
+
+[except that they only talk about infinite bases, target = all N]
+
+
 1.1 generic:
 An additive basis is [link to definition in sTeX]
 
