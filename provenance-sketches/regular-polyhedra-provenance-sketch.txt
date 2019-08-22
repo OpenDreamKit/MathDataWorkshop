@@ -1,0 +1,22 @@
+Provenance of Regular Polyhedra data
+
+Data creation:
+	Actor: Marston Conder
+	Date: June 2012
+	Source: https://www.math.auckland.ac.nz/~conder 
+	"This list was created by finding and analysing all normal subgroups.... in MAGMA..."
+	No script available
+	Runtime details unknown
+
+Data import into GAP:
+	Actor: Gabe Cunningham
+	Date: January 2017
+	Process: Used regex search/replace in Notepad++ to parse data into a GAP-readable form
+
+Data enrichment and export to MathHub
+	Actor: Gabe Cunningham
+	Date: August 2019
+	Process: Used personal script "PolytopeFrontEnd.gap" to:
+		1. Calculate additional properties of each datum
+		2. Export data to json file
+	Runtime: negligible
