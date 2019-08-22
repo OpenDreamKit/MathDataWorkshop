@@ -34,7 +34,7 @@ Here we talk about additive bases that
 An OPTIMAL additive basis [of our current type] is one that,
 for a given size, has the longest target interval.
 
-NOW se have a specific mathematical question that our data answers:
+NOW we have a specific mathematical question that our data answers:
 Given integer k, WHAT are the optimal additive bases [of our type]?
 
 
