@@ -74,7 +74,8 @@ will have identical results every time.
 
 3. Discussion of the validity of the data
 
-[Discussed in some detail the original article!]
+[Discussed in some detail the original article!
+ See accompanying article, Section 6, "Partial Verification"]
 
 3.1 Validity of each object
 Verifying that a given object is indeed a [vertically indecomposable
@@ -87,6 +88,11 @@ Verifying that our list is COMPLETE is difficult. Basically you have
 to trust the algorithm, implementation and computer. However there
 are several consistency checks (see article), and also the results
 can be compared to other published results (see article).
+
+[Anecdote: There are at least 2 cases in the history showing that
+lattice counts were incomplete]
+
+
 
 3.3 Uniqueness of objects in listing
 Verifying that each unlabeled [lattice of some type] is listed only
