@@ -1,0 +1,83 @@
+namespace http://www.opendreamkit.org/ ❚
+
+theory Meta : mitm:/Foundation?Logic =
+    include ☞mitm:/Foundation?Lists ❙
+    include ☞mitm:/Foundation?Strings ❙
+❚
+
+theory Provenance : ?Meta =
+
+    algorithm : type ❙
+    dataset : type ❙
+    ds : string ⟶ dataset ❙
+
+    theory implementation_theory : ?Meta > A : algorithm ❘ =
+        uses_libs : List string ❙
+        available_at : List string ❙
+        license : List string ❙
+        language : List string ❙
+    ❚
+    implementation : algorithm ⟶ type ❘ = [A:algorithm] Mod ☞?Provenance/implementation_theory A ❙
+
+    theory computation_theory > A : algorithm, I : implementation A ❘ =
+        start_time : List string ❙
+        machine : List string ❙
+        runtime : List string ❙
+        memory_usage : List string ❙
+        who_ran_it : List string ❙
+        parameters : List string ❙
+        inputs : List dataset ❙
+    ❚
+    computation : {A} implementation A ⟶ type ❘ = [A:algorithm,I: implementation A] Mod ☞?Provenance/computation_theory A I ❘ # computation 2 ❙
+
+    theory provenance_theory > DS : dataset ❘ =
+        algo : algorithm ❙
+        impl : implementation algo ❙
+        comp : computation impl ❙
+    ❚
+    provenance : dataset ⟶ type ❘ = [DS] Mod ☞?Provenance/provenance_theory DS ❙
+    from_comp : {DS:dataset, A : algorithm, I : implementation} computation I ⟶ provenance DS ❘ # prov 1 4 ❙
+
+    regexp_massage:algorithm ❙
+    via_regexp : implementation regexp_massage ❘ = ['
+        uses_libs := nil ,
+        available_at := nil ,
+        license := nil ,
+        language := ls "with regexp"
+    '] ❙
+❚
+
+theory Examples : ?Provenance =
+    ds1 : dataset ❘ = ds "3-digit numbers randomly ordered" ❙
+    quicksort:algorithm ❙
+    qs4j : implementation quicksort ❘ = ['
+        uses_libs := (ls "scala_lib","scalaxml"),
+        available_at := (ls "Nowhere"),
+        license := (ls "GPL3"),
+        language := (ls "Java")
+    '] ❙
+    comp : computation qs4j ❘ = ['
+        start_time := (ls "23 BCE") ,
+        machine := (ls "my laptop") ,
+        runtime := (ls "way too long") ,
+        memory_usage := (ls "42b") ,
+        who_ran_it := (ls "Julius Cesar"),
+        parameters := (ls "--help" , "me"),
+        inputs := (ls ds1)
+    '] ❙
+
+    d_s : dataset ❘ = ds "3-digit numbers sorted alphabetically" ❙
+
+    provd_s : prov d_s comp ❙
+
+    comp: computation via_regexp ❘ = ['
+        start_time := (ls "2019-05-07") ,
+        machine := (ls "my laptop") ,
+        runtime := (ls "negligible") ,
+        memory_usage := nil ,
+        who_ran_it := (ls "Hans Dampf") ,
+        parameters := nil ,
+        input := d_s
+    '] ❙
+
+❚
