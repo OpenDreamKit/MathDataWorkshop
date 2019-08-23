@@ -62,7 +62,7 @@ is also updated and prepared for publication on MDH.
 5. **Dataset Deployment**: *D* and *H* are deployed on MDH and announced to the
    community. The raw submission *D/H/S*  is archived in a special repository on
    http://gl.mathhub.info for safekeeping and reference (we might actually use a pull
-   requrest for this repository for the dataset preparation process --> to be discussed). 
+   request for this repository for the dataset preparation process --> to be discussed). 
 
 ## 5. (possibly) A Dataset Journal
 
