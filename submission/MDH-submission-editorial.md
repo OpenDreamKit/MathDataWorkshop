@@ -59,7 +59,9 @@ who collaborates with *A* on the actual dataset submission. Together they
 generated User Interface is evaluated by *E* and *A* together, possibly generating an
 iteration over the dataset preparation step. In this step the human-oriented document *H*
 is also updated and prepared for publication on MDH. 
-5. **Dataset Deployment**: *D* and *H* are deployed on MDH and announced to the community.
+5. **Dataset Deployment**: *D* and *H* are deployed on MDH and announced to the
+   community. The raw submission *D/H/S*  is archived in a special repository on
+   http://gl.mathhub.info for safekeeping. 
 
 ## 5. (possibly) A Dataset Journal
 
