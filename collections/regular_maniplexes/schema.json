@@ -1,7 +1,7 @@
 {
     "displayName": "Regular Maniplexes",
     "slug": "maniplexes",
-    "description": "tbd",
+    "description": "All regular maniplexes of rank 3 with automorphism groups of order 200 or less.",
     "properties": [
         {
             "slug": "schlafli",
@@ -34,14 +34,39 @@
             "codec": "StandardBool"
         },
         {
-            "slug": "polytope",
-            "displayName": "Polytope",
-            "codec": "StandardBool"
-        },
-        {
             "slug": "small_group_id",
             "displayName": "Small Group ID",
             "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "v_num",
+            "displayName": "Number of vertices",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "e_num",
+            "displayName": "Number of edges",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "f_num",
+            "displayName": "Number of faces",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "vertex_faithful",
+            "displayName": "Vertex-faithful",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "facet_faithful",
+            "displayName": "Facet-faithful",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "polytope",
+            "displayName": "Polytopal",
+            "codec": "StandardBool"
         }
     ]
 }
