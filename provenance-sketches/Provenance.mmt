@@ -1,5 +1,22 @@
 namespace http://www.opendreamkit.org/ ❚
 
+/T We provide a first infrastructure for formalized provenance of mathematical data. The
+  idea behind this is that mathematical data sets are (usually) generated computationally,
+  possibly using existing data sets as input.
+
+  We model provenance as MMT terms that describe concrete computations, i.e. the
+  application of a concrete implementation to a set of existing data sets and parameters.
+
+  Implementation objects are concrete realizations of algorithms, which we (for now) leave
+  atomic.
+
+  For concrete examples see the theory $?Examples$ below.
+
+  For use in the MathDataHub System (see http://mdhalpa.mathhub.info) we expecte a
+  form-based interface which provides a check-list, the data set author can fill out and
+  which generates well-typed provenance terms. 
+❚
+
 theory Meta : mitm:/Foundation?Logic =
     include ☞mitm:/Foundation?Lists ❙
     include ☞mitm:/Foundation?Strings ❙
@@ -7,19 +24,31 @@ theory Meta : mitm:/Foundation?Logic =
 
 theory Provenance : ?Meta =
 
+    /T we leave algorithms atomic for now. ❙
     algorithm : type ❙
+    /T we leave algorithms atomic here. They are identified by (and constructed from) a
+       URI in the MathDataHub system, e.g. https://mdhalpha.mathhub.info/collection/ab/ ❙
     dataset : type ❙
     ds : string ⟶ dataset ❙
+
+    /T Implementation objects are concrete realizations of algorithms. We also record what
+      libraries are used, where the code is available (a list of URIs), licenses and
+      programming language. ❙
 
     theory implementation_theory : ?Meta > A : algorithm ❘ =
         uses_libs : List string ❙
         available_at : List string ❙
+        revision : List string ❙
         license : List string ❙
         language : List string ❙
     ❚
     implementation : algorithm ⟶ type ❘ = [A:algorithm] Mod ☞?Provenance/implementation_theory A ❙
 
-    theory computation_theory > A : algorithm, I : implementation A ❘ =
+    /T Computation objects model computational events that apply a concrete implementation to a
+       set of existing data sets and parameters. We also record various metadata-like
+       properties of the computation event. ❙
+       
+theory computation_theory > A : algorithm, I : implementation A ❘ =
         start_time : List string ❙
         machine : List string ❙
         runtime : List string ❙
@@ -30,14 +59,22 @@ theory Provenance : ?Meta =
     ❚
     computation : {A} implementation A ⟶ type ❘ = [A:algorithm,I: implementation A] Mod ☞?Provenance/computation_theory A I ❘ # computation 2 ❙
 
+    /T A provenance theory ties algorithms, implementations, and computations together
+       with the data set that creates. ❙
     theory provenance_theory > DS : dataset ❘ =
         algo : algorithm ❙
         impl : implementation algo ❙
         comp : computation impl ❙
     ❚
     provenance : dataset ⟶ type ❘ = [DS] Mod ☞?Provenance/provenance_theory DS ❙
+    /T  In practice we use the $?from_comp$ constructor to write down provenance given a
+       computation object. ❙
     from_comp : {DS:dataset, A : algorithm, I : implementation} computation I ⟶ provenance DS ❘ # prov 1 4 ❙
 
+    /T We supply a common "computational object", which models the common practice to
+       massage a data set into a form a script or implementation can process by manually applying
+       regular expression replacement e.g. in an editor until the syntax matches the input
+       format of the implementation.  ❙
     regexp_massage:algorithm ❙
     via_regexp : implementation regexp_massage ❘ = ['
         uses_libs := nil ,
@@ -47,15 +84,26 @@ theory Provenance : ?Meta =
     '] ❙
 ❚
 
-theory Examples : ?Provenance =
+/T To fortify our intuition, let us look at an extended exapmle. ❙
+theory Quicksorting_Numbers_and_postprocessing : ?Provenance =
+
+    /T We start with an input data set  ❙ 
     ds1 : dataset ❘ = ds "3-digit numbers randomly ordered" ❙
+
+    /T Quicksort is an algorithm, which we assume as a given. ❙ 
     quicksort:algorithm ❙
+
+    /T Quicksort has a java implementation which is available on Github, we have used a
+    particular revision ❙ 
     qs4j : implementation quicksort ❘ = ['
         uses_libs := (ls "scala_lib","scalaxml"),
-        available_at := (ls "Nowhere"),
+        available_at := (ls "https://github.com/example/qs4j/"),
+	revision := (ls "d4adbf7b81750b492708aba4d102810cf0646029")
         license := (ls "GPL3"),
         language := (ls "Java")
     '] ❙
+
+    /T and now a computation based on this implementation. ❙
     comp : computation qs4j ❘ = ['
         start_time := (ls "23 BCE") ,
         machine := (ls "my laptop") ,
@@ -66,11 +114,16 @@ theory Examples : ?Provenance =
         inputs := (ls ds1)
     '] ❙
 
+    /T The result of this computation is an alphabetically sorted data set. ❙
     d_s : dataset ❘ = ds "3-digit numbers sorted alphabetically" ❙
 
+    /T We tie the provenance to the computation above.   ❙
     provd_s : prov d_s comp ❙
-
-    comp: computation via_regexp ❘ = ['
+   
+   /T As a final step,  we massage the list into PERL format, we model this by a
+      "computation event", which uses the ready-made ready-mande "implementation"
+      $provenance?via_regexp$ and record the metadata ❙   
+   proc_perl :  computation via_regexp ❘ = ['
         start_time := (ls "2019-05-07") ,
         machine := (ls "my laptop") ,
         runtime := (ls "negligible") ,
@@ -80,4 +133,7 @@ theory Examples : ?Provenance =
         input := d_s
     '] ❙
 
+    /T the result of the computation in $?proc_perl$ is the final data set. ❙
+    d_s_processed : dataset ❘ = ds "3-digit numbers sorted alphabetically processed for PERL" ❙
+   processed : prov d_s_processed proc_perl ❙
 ❚
