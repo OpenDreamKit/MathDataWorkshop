@@ -4,7 +4,13 @@
 <p><strong>Date</strong>: August 2019.</p>
 <h2 id="background">1. Background</h2>
 <p>The <a href="htp://mdhalpha.mathhub.info">MathDataHub System (MDH)</a> collects Mathematical Data sets. The data sets are described formally via a</p>
-<p>1.<strong>schema theory</strong> that describes the database schema and its relation to the mathematics, 2. a (flexible) <strong>formalization of the mathematical background theory</strong>, 3. a set of <strong>codecs</strong> that mediate between the database level in 1. and the mathematical level in 2. programmatically. 4. a formalization of <strong>dataset provenance</strong>. 5. a <strong>human-readable</strong> (i.e. natural language; usually English) <strong>document</strong> that describes all of the above to the human readers.</p>
+<ol type="1">
+<li><strong>schema theory</strong> that describes the database schema and its relation to the mathematics,</li>
+<li>a (flexible) <strong>formalization of the mathematical background theory</strong>,</li>
+<li>a set of <strong>codecs</strong> that mediate between the database level in 1. and the mathematical level in 2. programmatically.</li>
+<li>a formalization of <strong>dataset provenance</strong>.</li>
+<li>a <strong>human-readable</strong> (i.e. natural language; usually English) <strong>document</strong> that describes all of the above to the human readers.</li>
+</ol>
 <p>Given such a description, MDH generate a database extension and an importer from a JSON (or soon CSV) file that contains the dataset data in structured form.</p>
 <h2 id="this-document">2. This document</h2>
 <p>describes the process for dataset submission (technical) and the editorial process (mathematical) for MDH.</p>
@@ -14,8 +20,8 @@
 <li><strong>Developers</strong> who create and maintain the system code, data structure, and user interfaces. Currently Katja Bercic and Tom Wiesing.</li>
 <li><strong>Knowledge Engineers</strong> who create flexiformalizations and codecs. Currently, Dennis Müller, Florian Rabe, and Michael Kohlhase</li>
 <li><strong>Dataset Authors</strong> who create datasets, specify the mathematical objects involved, and provide provenance.</li>
-<li><strong>Editors</strong> who organize the mathematical evaluation of the data set and the technical creation of the formal submission.</li>
-<li><strong>Reviewers</strong> who evaluate the mathematical research value of the data set.</li>
+<li><strong>Editors</strong> who organize the mathematical evaluation of the data set and the technical creation of the formal submission. Currently, the Editors are <a href="http://kwarc.info/people/kbercic/">Katja Bercic</a> and <a href="http://kwarc.info/people/mkohlhase/">Michael Kohlhase</a>.</li>
+<li><strong>Reviewers</strong> who supply mathematical domain expertise and review submissions. Currently, these include <a href="http://www.gabrielcunningham.com">Gabriel Cunningham</a> and <a href="http://math.aalto.fi/en/people/jukka.kohonen">Jukka Kohohnen</a></li>
 <li><strong>Readers</strong> who use the MDH system to gain knowledge about the mathematical objects.</li>
 </ol>
 <p>The first four categories contribute to the submission and editorial processes.</p>
@@ -23,7 +29,7 @@
 <p>Here are the steps of a MDH submission process; a new step is only started when the previous one was successful.</p>
 <ol type="1">
 <li><strong>Exposee</strong>: A potential dataset author <em>A</em> contacts an MDH editor <em>E</em> with a human-oriented description <em>H</em> of the proposed dataset submission <em>D</em>.</li>
-<li><strong>Hosting Evaluation</strong>: <em>E</em> organizes a scientific evaluation of the novelty, interest, and plausibility of the data set, possibly involving external domain experts in the process. Note that the goal of this evaluation is to decide on whether MDH wants to host the data set <em>D</em>.</li>
+<li><strong>Hosting Evaluation</strong>: <em>E</em> organizes a scientific evaluation of the novelty, interest, and plausibility of the data set, possibly involving reviewers as external domain experts in the process. Note that the goal of this evaluation is to decide on whether MDH wants to host the data set <em>D</em> and therefore will be quite quick and benevolent.</li>
 <li><strong>Dataset Preparation</strong>: <em>E</em> brings <em>A</em> into contact with some knowledge engineer <em>K</em> who collaborates with <em>A</em> on the actual dataset submission. Together they
 <ol type="1">
 <li>determine whether new codecs are necessary for <em>D</em>. If so, <em>K</em> prepares these using <em>A</em> as a domain expert.</li>
@@ -31,9 +37,10 @@
 <li>prepare a schema theory <em>S</em> for <em>D</em>, mostly by selecting codecs for the mathematical types from step 2. and then determining a subset of properties that form a key.</li>
 <li>bringing the dataset <em>D</em> into a form that is acceptable by the MDH importer generated from <em>S</em>.</li>
 <li>formalizing the dataset provenance for <em>D</em></li>
-</ol></li>
-<li><strong>Dataset Evaluation</strong>: The dataset <em>D</em> is uploaded to a test server for MDH and the generated User Interface is evaluated by <em>E</em> and <em>A</em> together, possibly generating an iteration over the dataset preparation step. In this step the human-oriented document <em>H</em> is also updated and prepared for publication on MDH.</li>
-<li><strong>Dataset Deployment</strong>: <em>D</em> and <em>H</em> are deployed on MDH and announced to the community. The raw submission <em>D/H/S</em> is archived in a special repository on http://gl.mathhub.info for safekeeping and reference (we might actually use a pull request for this repository for the dataset preparation process –&gt; to be discussed).</li>
+</ol>
+All of these are iterated in a special a dedicated branch in a special MDH submission repository on http://gl.mathhub.info for safekeeping, reference, and accountability.</li>
+<li><strong>Dataset Evaluation</strong>: The dataset <em>D</em> (or a subset, iff space matters) is uploaded to a public test server for MDH and the generated User Interface is evaluated by <em>E</em> and <em>A</em> together. This evaluation includes an integration test with existing datasets. Note that while the test server is public, any identifiers will be preliminary. This evaluation process can result in an iteration over the dataset preparation step. In this step the human-oriented document <em>H</em> is also updated and prepared for publication on MDH.</li>
+<li><strong>Dataset Deployment</strong>: <em>D</em> and <em>H</em> are deployed on MDH and announced to the community. The raw submission <em>D/H/S</em> is archived in a special repository on</li>
 </ol>
 <h2 id="possibly-a-dataset-journal">5. (possibly) A Dataset Journal</h2>
 <p>Given the careful editorial process described above, we could extend MDH into an <strong>International Journal of Mathematical Data Sets</strong> with little effort: just a on <a href="http://arxiv.org">arXiv</a>, <em>A</em> could be given the choice to submit <em>H</em> to a specially founded journal that would organize publication in of <em>H</em> (and by reference <em>A</em> in the archival literature) and thus generate academic reputation and recognition for <em>A</em> in particular and the mathematical data set community in general.</p>
