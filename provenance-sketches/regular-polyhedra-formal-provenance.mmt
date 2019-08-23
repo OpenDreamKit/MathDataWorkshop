@@ -1,0 +1,54 @@
+	low_index_normal_subgroups : algorithm ❙
+	magma_low_index : implementation low_index_normal_subgroups ❘ = ['
+        uses_libs := nil ,
+        available_at := nil ,
+        license := nil ,
+        language := ls "in MAGMA"
+    '] ❙
+	comp_low_index : computation magma_low_index ❘ = ['
+		start_time := (ls "June 2012") ,
+        machine := (ls "unknown") ,
+        runtime := (ls "unknown") ,
+        memory_usage := (ls "unknown") ,
+        who_ran_it := (ls "Marston Conder"),
+        parameters := (ls "Up to 2000 flags"),
+        inputs := nil
+	'] ❙
+	
+	ds1 : dataset ❘ = ds "A list of the groups of all regular polyhedra with up to 2000 flags" ❙
+	prov_ds1 : prov ds1 comp_low_index ❙
+
+	comp_regexp : computation via_regexp ❘ = ['
+		start_time := (ls "January 2017") ,
+        machine := (ls "my laptop") ,
+        runtime := (ls "negligible") ,
+        memory_usage := nil ,
+        who_ran_it := (ls "Gabe Cunningham"),
+        parameters := nil,
+        inputs := (ls ds1)
+	'] ❙
+
+    ds2 : dataset ❘ = ds "A GAP-readable list of the groups of all regular polyhedra with up to 2000 flags" ❙
+    prov_ds2 : prov ds2 comp_regexp ❙
+
+	ad_hoc : algorithm ❙
+	
+	via_gap : implementation ad_hoc ❘ = ['
+        uses_libs := (ls "Small Groups Library") ,
+        available_at := nil ,
+        license := nil ,
+        language := ls "in GAP"
+    '] ❙
+	
+	comp_gap : computation via_gap ❘ = ['
+		start_time := (ls "August 2019") ,
+        machine := (ls "my laptop") ,
+        runtime := (ls "negligible") ,
+        memory_usage := nil ,
+        who_ran_it := (ls "Gabe Cunningham"),
+        parameters := nil,
+        inputs := (ls ds2)
+	'] ❙
+	
+    ds3 : dataset ❘ = ds "A json file of all regular polyhedra with up to 2000 flags, along with some of their properties" ❙
+    prov_ds3 : prov ds3 comp_gap ❙

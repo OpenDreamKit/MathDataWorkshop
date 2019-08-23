@@ -38,6 +38,7 @@ theory Provenance : ?Meta =
     theory implementation_theory : ?Meta > A : algorithm ❘ =
         uses_libs : List string ❙
         available_at : List string ❙
+	main: string❙
         revision : List string ❙
         license : List string ❙
         language : List string ❙
@@ -48,7 +49,7 @@ theory Provenance : ?Meta =
        set of existing data sets and parameters. We also record various metadata-like
        properties of the computation event. ❙
        
-theory computation_theory > A : algorithm, I : implementation A ❘ =
+    theory computation_theory > A : algorithm, I : implementation A ❘ =
         start_time : List string ❙
         machine : List string ❙
         runtime : List string ❙
@@ -69,7 +70,7 @@ theory computation_theory > A : algorithm, I : implementation A ❘ =
     provenance : dataset ⟶ type ❘ = [DS] Mod ☞?Provenance/provenance_theory DS ❙
     /T  In practice we use the $?from_comp$ constructor to write down provenance given a
        computation object. ❙
-    from_comp : {DS:dataset, A : algorithm, I : implementation} computation I ⟶ provenance DS ❘ # prov 1 4 ❙
+    producedBy : {DS:dataset, A : algorithm, I : implementation A} computation I ⟶ provenance DS ❘ # producedBy 1 4 ❙
 
     /T We supply a common "computational object", which models the common practice to
        massage a data set into a form a script or implementation can process by manually applying
@@ -118,7 +119,7 @@ theory Quicksorting_Numbers_and_postprocessing : ?Provenance =
     d_s : dataset ❘ = ds "3-digit numbers sorted alphabetically" ❙
 
     /T We tie the provenance to the computation above.   ❙
-    provd_s : prov d_s comp ❙
+    provd_s : producedBy d_s comp ❙
    
    /T As a final step,  we massage the list into PERL format, we model this by a
       "computation event", which uses the ready-made ready-mande "implementation"
@@ -136,4 +137,113 @@ theory Quicksorting_Numbers_and_postprocessing : ?Provenance =
     /T the result of the computation in $?proc_perl$ is the final data set. ❙
     d_s_processed : dataset ❘ = ds "3-digit numbers sorted alphabetically processed for PERL" ❙
    processed : prov d_s_processed proc_perl ❙
+❚
+
+/T To fortify our intuition, let us look at an extended exapmle. ❙
+theory Fibonacci : ?Provenance =
+
+    /T We use the naive recursion algorithm for generating fibonacci numbers. ❙ 
+    fib_naive_recursion:algorithm ❙
+
+    /T We use a fake implementation for this example.❙ 
+    myImpl : implementation fib_naive_recursion ❘ = ['
+        uses_libs := (ls "numpy"),
+        available_at := (ls "https://mydomain.com/fibonacci/"),
+	main := ("naive.py"),
+	revision := (ls "1.0")
+        license := (ls "GPL3"),
+        language := (ls "Python")
+    '] ❙
+
+    /T and now a computation based on this implementation. ❙
+    comp : computation myImpl ❘ = ['
+        start_time := (ls "23 BCE") ,
+        machine := (ls "my laptop") ,
+        runtime := (ls "way too long") ,
+        memory_usage := (ls "42b") ,
+        who_ran_it := (ls "Julius Cesar"),
+        parameters := (ls "-upto" , "10"),
+        inputs := (nil)
+    '] ❙
+
+    /T an identifier for the resulting dataset❙
+    myFibTable: dataset❙
+
+    /T We tie the dataset to the computation.   ❙
+    provenance : producedBy myFibTable comp ❙
+❚
+
+
+
+theory Kohonen_2018_lattices : ?Provenance =
+
+    /T The algorithm is described in <https://doi.org/10.1007/s11083-018-9475-2>. I don't know where you want this pointer. ❙ 
+    KohonenLatticeAlgo: algorithm ❙
+
+    gralist : implementation KohonenLatticeAlgo❘ = ['
+        uses_libs := (ls "nauty 2.6r11"),
+        available_at := (ls "https://b2share.eudat.eu/records/dbb096da4e364b5e9e37b982431f41de/"),
+	main := ("gralist.c"),
+	revision := (nil)
+        license := (ls "MIT"),
+        language := (ls "C")
+    '] ❙
+
+    /T Kohonen actually runs the algorithm separately for each size, i.e., he produces a separate dataset per size. For simplicity, in this example, for each lattice type we describe the biggest size only.❙
+    modular2016 : computation gralist❘ = ['
+        start_time := (ls "January 2016") ,
+        machine := (ls "taito.csc.fi / single 2.6 GHz Intel Xeon E5-2690 core") ,
+        runtime := (ls "79661.32 s") ,
+        memory_usage := (ls "Some GB") ,
+        who_ran_it := (ls "Jukka Kohonen"),
+        parameters := (ls "-slmi", "30"),
+        inputs := (nil)
+    '] ❙
+
+    graded2016 : computation gralist❘ = ['
+        start_time := (ls "January 2016") ,
+        machine := (ls "taito.csc.fi / single 2.6 GHz Intel Xeon E5-2690 core") ,
+        runtime := (ls "142496.2 s") ,
+        memory_usage := (ls "Some GB") ,
+        who_ran_it := (ls "Jukka Kohonen"),
+        parameters := (ls "-mi", "21"),
+        inputs := (nil)
+    '] ❙
+
+    semimodular2016 : computation gralist❘ = ['
+        start_time := (ls "January 2016") ,
+        machine := (ls "taito.csc.fi / single 2.6 GHz Intel Xeon E5-2690 core") ,
+        runtime := (ls "37775.25 s") ,
+        memory_usage := (ls "Some GB") ,
+        who_ran_it := (ls "Jukka Kohonen"),
+        parameters := (ls "-lmi", "25"),
+        inputs := (nil)
+    '] ❙
+
+    geometric2016 : computation gralist❘ = ['
+        start_time := (ls "January 2016") ,
+        machine := (ls "taito.csc.fi / single 2.6 GHz Intel Xeon E5-2690 core") ,
+        runtime := (ls "1203.81 s") ,
+        memory_usage := (ls "Some GB") ,
+        who_ran_it := (ls "Jukka Kohonen"),
+        parameters := (ls "-lcmi", "34"),
+        inputs := (nil)
+    '] ❙
+
+    /T The datasets were produced by the computations.   ❙
+
+    modularLattices30: dataset❙
+    provenance : producedBy modularLattices30 modular2016 ❙
+
+    gradedLattices21: dataset❙
+    provenance : producedBy gradedLattices21 graded2016 ❙
+
+    semimodularLattices25: dataset❙
+    provenance : producedBy semimodularLattices25 semimodular2016 ❙
+
+    geometricLattices34: dataset❙
+    provenance : producedBy geometricLattices21 geometric2016 ❙
+
+
+
 ❚
