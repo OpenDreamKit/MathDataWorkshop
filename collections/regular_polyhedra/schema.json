@@ -1,7 +1,7 @@
 {
     "displayName": "Regular Polyhedra",
     "slug": "polyhedra",
-    "description": "tbd",
+    "description": "All regular abstract polyhedra with automorphism groups of order 2000 or less.",
     "properties": [
         {
             "slug": "schlafli",
@@ -35,13 +35,43 @@
         },
         {
             "slug": "polytope",
-            "displayName": "Polytope",
+            "displayName": "Polytopal",
             "codec": "StandardBool"
         },
         {
             "slug": "small_group_id",
             "displayName": "Small Group ID",
             "codec": "ListAsArray_StandardInt"
+        },
+        {
+            "slug": "v_num",
+            "displayName": "Number of vertices",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "e_num",
+            "displayName": "Number of edges",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "f_num",
+            "displayName": "Number of faces",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "vertex_faithful",
+            "displayName": "Vertex-faithful",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "facet_faithful",
+            "displayName": "Facet-faithful",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "degenerate",
+            "displayName": "Degenerate",
+            "codec": "StandardBool"
         }
     ]
 }
