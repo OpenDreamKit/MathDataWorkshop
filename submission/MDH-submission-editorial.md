@@ -75,7 +75,7 @@ who collaborates with *A* on the actual dataset submission. Together they
    this step the human-oriented document *H* is also updated and prepared for publication
    on MDH.
 5. **Dataset Deployment**: *D* and *H* are deployed on MDH and announced to the
-   community. The raw submission *D/H/S*  is archived in a special repository on
+   community. The raw submission *D/H/S*  is archived in the submission repository. 
 
 ## 5. (possibly) A Dataset Journal
 
@@ -89,7 +89,5 @@ particular and the mathematical data set community in general.
 The establishment of such a journal would be facilitated by MDH, but is a conceptually
 separate process. 
 
-   
-
-<!--  LocalWords:  formalization Bercic flexiformalizations formalizing
+n<!--  LocalWords:  formalization Bercic flexiformalizations formalizing
  -->
