@@ -10,10 +10,7 @@ This file covers the organisational notes. For work-related notes see the file [
 
 Sheets and towels should be there. Bring toiletries!
 
-#### TODO for Saturday morning
-
-* Move food to La Tour
-* Move one of the two white cutting boards from Le Roi Soleil to Le Petit Prince
+MathDataHub Demo is at https://mdhalpha.mathhub.info/
 
 ## Bring to the workshop / Preparations
 
@@ -43,5 +40,3 @@ Participants:
 * Nicolas Thiéry [tent]
 * Michael Torpey
 * Tom Wiesing
-
-MathDataHub Demo is at https://mdhalpha.mathhub.info/
