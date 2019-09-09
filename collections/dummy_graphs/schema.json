@@ -1,0 +1,12 @@
+{
+    "displayName": "Dummy Graphs",
+    "slug": "dg",
+    "description": "This is just a list of graphs. ",
+    "properties": [
+        {
+            "slug": "graph",
+            "displayName": "Graph",
+            "codec": "GraphAsSparse6"
+        }
+    ]
+}
