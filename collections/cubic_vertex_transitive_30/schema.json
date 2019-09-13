@@ -1,0 +1,37 @@
+{
+    "displayName": "Cubic vertex-transitive graphs of order at most $30$",
+    "slug": "cvt30",
+    "description": "This is a subset of the Census of small connected cubic vertex-transitive graphs. ",
+    "properties": [
+        {
+            "slug": "order",
+            "displayName": "Order",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "cvt_index",
+            "displayName": "CVT Index",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "graph",
+            "displayName": "Graph",
+            "codec": "GraphAsSparse6"
+        },
+        {
+            "slug": "name",
+            "displayName": "Name",
+            "codec": "StandardString"
+        },
+        {
+            "slug": "is_arc_transitive",
+            "displayName": "Is Arc-Transitive",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_cayley",
+            "displayName": "Is Cayley",
+            "codec": "StandardBool"
+        }
+    ]
+}
