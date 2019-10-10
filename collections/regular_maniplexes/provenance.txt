@@ -1,2 +1,0 @@
-Data computed with GAP on 8/20/19 by Gabe Cunningham.
-Data provided to OpenDreamKit on 8/20/19 by Gabe Cunningham.
