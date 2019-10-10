@@ -42,32 +42,32 @@
             "slug": "issemi",
             "displayName": "is semimodular",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "islower",
             "displayName": "is lower semimodular",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "ismod",
             "displayName": "is modular",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "isatomistic",
             "displayName": "Atomistic",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "isgeo",
             "displayName": "is geometric",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "isdist",
             "displayName": "is distributive",
             "codec": "StandardBool"
-        }
+        },
         {
             "slug": "isdeco",
             "displayName": "is vertically decomposable",
