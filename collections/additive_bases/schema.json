@@ -2,6 +2,17 @@
     "displayName": "Additive Bases",
     "slug": "ab",
     "description": "This is the full collection of extremal additive bases of up to $25$ elements. ",
+    "metadata": {
+        "schemaTheoryURL": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt",
+        "authors": "Jukka Kohonen",
+        "references": [
+            {
+                "type": "pdf",
+                "title": "A Meet-in-the-Middle Algorithm for Finding Extremal Restricted Additive 2-Bases",
+                "url": "http://emis.ams.org/journals/JIS/VOL17/Kohonen2/kohonen5.pdf"
+            }
+        ]
+    },
     "properties": [
         {
             "slug": "basis",
