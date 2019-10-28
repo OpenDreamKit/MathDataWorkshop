@@ -6,12 +6,15 @@
         {
             "slug": "basis",
             "displayName": "Basis",
-            "codec": "ListAsArray_StandardInt"
+            "codec": "ListAsArray_StandardInt",
+            "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt#L12",
+            "description": "A set $A$ of non-negative integers such that every non-negative integer can be written in at least one way as a sum of integers from $A$."
         },
         {
             "slug": "k",
             "displayName": "Size",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The size of the additive basis."
         },
         {
             "slug": "n",
@@ -21,12 +24,14 @@
         {
             "slug": "S",
             "displayName": "Symmetric",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt#L21"
         },
         {
             "slug": "R",
             "displayName": "Restricted",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt#L15"
         }
     ]
 }
