@@ -1,15 +1,27 @@
 {
     "displayName": "Additive Bases",
     "slug": "ab",
-    "description": "This is the full collection of extremal additive bases of up to $25$ elements. ",
+    "description": "This is the full collection of extremal additive bases of up to $25$ elements.",
     "metadata": {
-        "schemaTheoryURL": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt",
+        "schemaTheoryURL": 
+        "https://gl.mathhub.info/ODK/mbgen/blob/master/source/additive_bases_schema.mmt",
+        "size": 47,
         "authors": "Jukka Kohonen",
         "references": [
+            {
+                "type": "MitM",
+                "title": "Additive Bases (MitM)",
+                "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt"
+            },
             {
                 "type": "pdf",
                 "title": "A Meet-in-the-Middle Algorithm for Finding Extremal Restricted Additive 2-Bases",
                 "url": "http://emis.ams.org/journals/JIS/VOL17/Kohonen2/kohonen5.pdf"
+            },
+            {
+                "type": "web",
+                "title": "Provenance Sketch",
+                "url": "https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/provenance-sketches/additive-basis-provenance-sketch.txt"
             }
         ]
     },
