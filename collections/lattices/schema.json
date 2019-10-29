@@ -2,6 +2,34 @@
     "displayName": "Lattices",
     "slug": "lat",
     "description": "Description TBD",  
+    "metadata": {
+        "schemaTheoryURL": 
+        "https://gl.mathhub.info/ODK/mbgen/blob/master/source/lattices_schema.mmt",
+        "size": 375692,
+        "authors": "Jukka Kohonen.",
+        "references": [
+            {
+                "type": "doi",
+                "title": "Generating Modular Lattices of up to 30 Elements",
+                "url": "https://doi.org/10.1007/s11083-018-9475-2"
+            },
+            {
+                "type": "web",
+                "title": "Provenance Sketch",
+                "url": "https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/provenance-sketches/lattices-provenance-sketch.txt"
+            },
+            {
+                "type": "web",
+                "title": "Formal Provenance",
+                "url": "https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/provenance-sketches/Provenance.mmt"
+            },
+            {
+                "type": "web",
+                "title": "Complete dataset on EUDAT",
+                "url": "https://b2share.eudat.eu/records/dbb096da4e364b5e9e37b982431f41de"
+            }
+        ]
+    },
     "properties": [
         {
             "slug": "covering",
