@@ -52,13 +52,12 @@
         {
             "slug": "len",
             "displayName": "Length",
-            "codec": "StandardInt",
+            "codec": "StandardInt"
         },
         {
             "slug": "ncoatom",
             "displayName": "Number of coatoms",
-            "codec": "StandardInt",
-            ""
+            "codec": "StandardInt"
         },
         {
             "slug": "natom",
