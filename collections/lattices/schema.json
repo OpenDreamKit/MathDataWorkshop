@@ -34,7 +34,7 @@
         {
             "slug": "covering",
             "displayName": "Covering relation",
-            "codec": "StandardString"
+            "codec": "CoveringRelationAsDigraph6"
         },
         {
             "slug": "name",

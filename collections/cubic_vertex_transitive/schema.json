@@ -29,112 +29,134 @@
         {
             "slug": "order",
             "displayName": "Order",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Number of vertices in the graph."
         },
         {
             "slug": "cvt_index",
             "displayName": "CVT Index",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Id of the graph in the dataset. A graph is uniquely identified by the id and the order."
         },
         {
             "slug": "graph",
             "displayName": "Graph",
-            "codec": "GraphAsSparse6"
+            "codec": "GraphAsSparse6",
+            "description": "The graph encoded in the sparse6 format."
         },
         {
             "slug": "name",
             "displayName": "Name",
-            "codec": "StandardString"
+            "codec": "StandardString",
+            "description": "A name of the graph."
         },
         {
             "slug": "clique_number",
             "displayName": "Clique Number",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The number of vertices in the largest clique subgraph."
         },
         {
             "slug": "diameter",
             "displayName": "Diameter",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The greatest distance between any pair of vertices."
         },
         {
             "slug": "girth",
             "displayName": "Girth",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Length of the shortest cycle in the graph."
         },
         {
             "slug": "is_arc_transitive",
             "displayName": "Is Arc-Transitive",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "For every two ordered pairs of adjacent vertices, does there exist an authomorphism, mapping one to the other."
         },
         {
             "slug": "is_bipartite",
             "displayName": "Is Bipartite",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Can the vertices of the graph be partitioned into two sets, such that every edge connects a vertex in one set to a vertex in the other set."
         },
         {
             "slug": "is_cayley",
             "displayName": "Is Cayley",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Can the graph be constructed as a Cayley graph of some group for some generating set."
         },
         {
             "slug": "is_distance_regular",
             "displayName": "Is Distance Regular",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "For any two vertices $v$ and $w$, the number of vertices at distance $j$ from $v$ and at distance $k$ from $w$ depends only upon $j$, $k$, and $i = d(v, w)$."
         },
         {
             "slug": "is_distance_transitive",
             "displayName": "Is Distance Transitive",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Given any two vertices $v$ and $w$ at any distance $i$, and any other two vertices $x$ and $y$ at the same distance, there is an automorphism of the graph that carries $v$ to $x$ and $w$ to $y$."
         },
         {
             "slug": "is_edge_transitive",
             "displayName": "Is Edge-Transitive",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "For every two edges, does there exist an authomorphism, mapping one to the other."
         },
         {
             "slug": "is_hamiltonian",
             "displayName": "Is Hamiltonian",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Does the graph have a cycle that visits each vertex exactly once."
         },
         {
             "slug": "is_partial_cube",
             "displayName": "Is Partial Cube",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Is the graph isometric to a subgraph of a hypercube."
         },
         {
             "slug": "is_split",
             "displayName": "Is Split",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Can the vertices of the graph be partitioned into a clique and an independent set."
         },
         {
             "slug": "is_strongly_regular",
             "displayName": "Is Strongly Regular",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Do there exists $\lambda$ and $\mu$ such that every two adjacent vertices have $\lambda$ common neighbours and every two non-adjacent vertices have $\mu$ common neighbours."
         },
         {
             "slug": "odd_girth",
             "displayName": "Odd Girth",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Length of the shortest odd cycle."
         },
         {
             "slug": "triangles_count",
             "displayName": "Triangles Count",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The number of cycles of length $3$ in the graph."
         },
         {
             "slug": "is_moebius_ladder",
             "displayName": "Is Moebius Ladder",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Is the graph a Moebius ladder."
         },
         {
             "slug": "is_prism",
             "displayName": "Is Prism",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Is the graph a skeleton of a prism."
         },
         {
             "slug": "is_spx",
             "displayName": "Is Split Praeger-Xu",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Does the graph belong to the Split Praeger-Xu family of graphs."
         }
     ]
 }
