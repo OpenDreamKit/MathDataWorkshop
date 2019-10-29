@@ -34,42 +34,50 @@
         {
             "slug": "schlafli",
             "displayName": "Schläfli Symbol",
-            "codec": "ListAsArray_StandardInt"
+            "codec": "ListAsArray_StandardInt",
+            "description": "The Schläfli symbol is a recursive description of regular polytopes or maniplexes. A polytope with the symbol ${p,q,r,...,y,z}$ has $z$ ${p,q,r,...,y}$-facets."
         },
         {
             "slug": "relators",
             "displayName": "Characterising Relators",
-            "codec": "ListAsArray_StandardJSON"
+            "codec": "ListAsArray_StandardJSON",
+            "description": "A list of additional relators in the finite representation of the polytope's automorphism group, expressed in terms of the standard flag-exchanging generators."
         },
         {
             "slug": "rank",
             "displayName": "Rank",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The dimension of the greatest face of the polytope."
         },
         {
             "slug": "group_size",
             "displayName": "Group Size",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "The size of the polytope's automorphism group."
         },
         {
             "slug": "f_vector",
             "displayName": "f-vector",
-            "codec": "ListAsArray_StandardInt"
+            "codec": "ListAsArray_StandardInt",
+            "description": "A vector representing the number of faces of each rank (starting with $0$)."
         },
         {
             "slug": "orientable",
             "displayName": "Orientable",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": ""
         },
         {
             "slug": "polytope",
             "displayName": "Polytopal",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Does the object satisfy the conditions for an abstract polytope."
         },
         {
             "slug": "small_group_id",
             "displayName": "Small Group ID",
-            "codec": "ListAsArray_StandardInt"
+            "codec": "ListAsArray_StandardInt",
+            "decription": "The identifying pair $(order, id)$ of the automorphism group in the Small Groups Library."
         },
         {
             "slug": "v_num",
