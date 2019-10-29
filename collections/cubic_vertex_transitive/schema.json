@@ -1,0 +1,140 @@
+{
+    "displayName": "A census of small connected cubic vertex-transitive graphs",
+    "slug": "cvt",
+    "description": "All connected cubic vertex-transitive graphs of order at most $1280$. ",
+    "metadata": {
+        "schemaTheoryURL": 
+        "https://gl.mathhub.info/ODK/mbgen/blob/master/source/cvt_schema.mmt",
+        "size": 111360,
+        "authors": "Original dataset by Primož Potočnik, Pablo Spiga and Gabriel Verret, data import and additional properties computed in Sage by Janoš Vidali.",
+        "references": [
+            {
+                "type": "doi",
+                "title": "Cubic vertex-transitive graphs on up to $1280$ vertices",
+                "url": "https://doi.org/10.1016/j.jsc.2012.09.002"
+            },
+            {
+                "type": "doi",
+                "title": "Bounding the order of the vertex-stabiliser in $3$-valent vertex-transitive and $4$-valent arc-transitive graphs",
+                "url": "https://doi.org/10.1016/j.jctb.2014.10.002"
+            },
+            {
+                "type": "web",
+                "title": "Official census website",
+                "url": "http://staff.matapp.unimib.it/~spiga/census.html"
+            }
+        ]
+    },
+    "properties": [
+        {
+            "slug": "order",
+            "displayName": "Order",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "cvt_index",
+            "displayName": "CVT Index",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "graph",
+            "displayName": "Graph",
+            "codec": "GraphAsSparse6"
+        },
+        {
+            "slug": "name",
+            "displayName": "Name",
+            "codec": "StandardString"
+        },
+        {
+            "slug": "clique_number",
+            "displayName": "Clique Number",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "diameter",
+            "displayName": "Diameter",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "girth",
+            "displayName": "Girth",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "is_arc_transitive",
+            "displayName": "Is Arc-Transitive",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_bipartite",
+            "displayName": "Is Bipartite",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_cayley",
+            "displayName": "Is Cayley",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_distance_regular",
+            "displayName": "Is Distance Regular",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_distance_transitive",
+            "displayName": "Is Distance Transitive",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_edge_transitive",
+            "displayName": "Is Edge-Transitive",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_hamiltonian",
+            "displayName": "Is Hamiltonian",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_partial_cube",
+            "displayName": "Is Partial Cube",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_split",
+            "displayName": "Is Split",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_strongly_regular",
+            "displayName": "Is Strongly Regular",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "odd_girth",
+            "displayName": "Odd Girth",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "triangles_count",
+            "displayName": "Triangles Count",
+            "codec": "StandardInt"
+        },
+        {
+            "slug": "is_moebius_ladder",
+            "displayName": "Is Moebius Ladder",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_prism",
+            "displayName": "Is Prism",
+            "codec": "StandardBool"
+        },
+        {
+            "slug": "is_spx",
+            "displayName": "Is Split Praeger-Xu",
+            "codec": "StandardBool"
+        }
+    ]
+}
