@@ -34,51 +34,56 @@
         {
             "slug": "covering",
             "displayName": "Covering relation",
-            "codec": "CoveringRelationAsDigraph6"
+            "codec": "CoveringRelationAsDigraph6",
+            "description": "The binary relation which holds between comparable elements that are immediate neighbours."
         },
         {
             "slug": "name",
             "displayName": "Common name",
-            "codec": "StandardString"
+            "codec": "StandardString",
+            "description": "Name of the lattice."
         },
         {
             "slug": "n",
-            "displayName": "size",
-            "codec": "StandardInt"
+            "displayName": "Size",
+            "codec": "StandardInt",
+            "description": "The number of elements in the lattice."
         },
         {
             "slug": "len",
-            "displayName": "length",
-            "codec": "StandardInt"
+            "displayName": "Length",
+            "codec": "StandardInt",
         },
         {
             "slug": "ncoatom",
-            "displayName": "number of coatoms",
-            "codec": "StandardInt"
+            "displayName": "Number of coatoms",
+            "codec": "StandardInt",
+            ""
         },
         {
             "slug": "natom",
-            "displayName": "number of atoms",
+            "displayName": "Number of atoms",
             "codec": "StandardInt"
         },
         {
             "slug": "isgraded",
-            "displayName": "is graded",
-            "codec": "StandardBool"
+            "displayName": "Is graded",
+            "codec": "StandardBool",
+            "description": "Can the lattice $L$ be equipped with a rank function $r$ from $L$ to $\mathbb{N}$ (or \mathbb{Z}), compatible with the ordering (so $r(x) < r(y)$ whenever $x < y$) such that whenever $y$ covers $x$, then $r(y) = r(x) + 1$."
         },
         {
             "slug": "issemi",
-            "displayName": "is semimodular",
+            "displayName": "Is semimodular",
             "codec": "StandardBool"
         },
         {
             "slug": "islower",
-            "displayName": "is lower semimodular",
+            "displayName": "Is lower semimodular",
             "codec": "StandardBool"
         },
         {
             "slug": "ismod",
-            "displayName": "is modular",
+            "displayName": "Is modular",
             "codec": "StandardBool"
         },
         {
@@ -88,17 +93,17 @@
         },
         {
             "slug": "isgeo",
-            "displayName": "is geometric",
+            "displayName": "Is geometric",
             "codec": "StandardBool"
         },
         {
             "slug": "isdist",
-            "displayName": "is distributive",
+            "displayName": "Is distributive",
             "codec": "StandardBool"
         },
         {
             "slug": "isdeco",
-            "displayName": "is vertically decomposable",
+            "displayName": "Is vertically decomposable",
             "codec": "StandardBool"
         }
     ]
