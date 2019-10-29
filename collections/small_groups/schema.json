@@ -1,7 +1,30 @@
 {
     "displayName": "Small Groups Library (up to order 1023)",
     "slug": "smallgp",
-    "description": "Description TBD", 
+    "description": "Description TBD",
+    "metadata": {
+        "schemaTheoryURL": 
+        "https://gl.mathhub.info/ODK/mbgen/blob/master/source/small_groups_schema.mmt",
+        "size": 11759677,
+        "authors": "Original dataset by Eick, Besche, and O'Brien. Export of the dataset subset and computing the structure description by Michael Torpey.",
+        "references": [
+            {
+                "type": "doi",
+                "title": "A millennium project: constructing Small Groups",
+                "url": "https://doi.org/10.1142/S0218196702001115"
+            },
+            {
+                "type": "web",
+                "title": "Provenance Sketch",
+                "url": "https://github.com/OpenDreamKit/MathDataWorkshop/blob/master/provenance-sketches/smallgrp-provenance-sketch.txt"
+            },
+            {
+                "type": "web",
+                "title": "Small Groups Library GAP package",
+                "url": "https://gap-packages.github.io/smallgrp/doc/chap1.html#X7C16EA1580AC7586"
+            }
+        ]
+    },
     "properties": [
         {
             "slug": "order",
