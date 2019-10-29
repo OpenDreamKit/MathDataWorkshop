@@ -29,42 +29,50 @@
         {
             "slug": "order",
             "displayName": "Order",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Number of elements in the group."
         },
         {
             "slug": "id",
             "displayName": "Small Group ID",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Id of the group in the dataset. A group is uniquely identified by the id and the order."
         },
         {
             "slug": "abelian",
             "displayName": "Abelian",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Is the group commutative."
         },
         {
             "slug": "nilpotent",
             "displayName": "Nilpotent",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Does the group have an upper central series that terminates with itself."
         },
         {
             "slug": "supersolvable",
             "displayName": "SupersolvableGroup",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Does the group have an invariant normal series where all the factors are cyclic groups."
         },
         {
             "slug": "solvable",
             "displayName": "Solvable",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Can the group be constructed from abelian groups using extensions."
         },
         {
             "slug": "frattini_factor",
             "displayName": "FrattiniFactor",
-            "codec": "ListAsArray_StandardInt"
+            "codec": "ListAsArray_StandardInt",
+            "description": "The pair $[order, id]$ of the group's Frattini factor in the Small Groups Library."
         },
         {
             "slug": "structure_description",
             "displayName": "Structure Description",
-            "codec": "StandardJSON"
+            "codec": "StandardJSON",
+            "description": "A short description of the group's structure as produced by GAP."
         }
     ]
 }
