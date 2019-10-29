@@ -68,7 +68,7 @@
             "slug": "isgraded",
             "displayName": "Is graded",
             "codec": "StandardBool",
-            "description": "Can the lattice $L$ be equipped with a rank function $r$ from $L$ to $\mathbb{N}$ (or \mathbb{Z}), compatible with the ordering (so $r(x) < r(y)$ whenever $x < y$) such that whenever $y$ covers $x$, then $r(y) = r(x) + 1$."
+            "description": "Can the lattice $L$ be equipped with a rank function $r$ from $L$ to $\\mathbb{N}$ (or \\mathbb{Z}), compatible with the ordering (so $r(x) < r(y)$ whenever $x < y$) such that whenever $y$ covers $x$, then $r(y) = r(x) + 1$."
         },
         {
             "slug": "issemi",
