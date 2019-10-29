@@ -34,11 +34,6 @@
             "codec": "StandardBool"
         },
         {
-            "slug": "lg_length",
-            "displayName": "Polytope",
-            "codec": "StandardInt"
-        },
-        {
             "slug": "frattini_factor",
             "displayName": "FrattiniFactor",
             "codec": "ListAsArray_StandardInt"
