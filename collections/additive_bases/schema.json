@@ -37,7 +37,7 @@
             "slug": "k",
             "displayName": "Size",
             "codec": "StandardInt",
-            "description": "The size of the additive basis."
+            "description": "The number of elements in the additive basis."
         },
         {
             "slug": "n",
