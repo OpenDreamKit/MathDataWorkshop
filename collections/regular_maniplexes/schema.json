@@ -2,6 +2,19 @@
     "displayName": "Regular Maniplexes",
     "slug": "maniplexes",
     "description": "All regular maniplexes of rank 3 with automorphism groups of order 200 or less.",
+    "metadata": {
+        "schemaTheoryURL": 
+        "https://gl.mathhub.info/ODK/mbgen/blob/master/source/regular_polyhedra_schema.mmt",
+        "size": 7898,
+        "authors": "Data computed with GAP on 8/20/19 by Gabe Cunningham. Data provided to OpenDreamKit on 8/20/19 by Gabe Cunningham.",
+        "references": [
+            {
+                "type": "MitM",
+                "title": "Maniplexes (MitM)",
+                "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/graphs/maniplexes.mmt"
+            }
+        ]
+    },
     "properties": [
         {
             "slug": "schlafli",
