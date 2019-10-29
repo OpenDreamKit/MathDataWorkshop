@@ -25,7 +25,7 @@
         },
         {
             "slug": "supersolvable",
-            "displayName": "SupersolvableGrou",
+            "displayName": "SupersolvableGroup",
             "codec": "StandardBool"
         },
         {
