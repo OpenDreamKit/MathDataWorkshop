@@ -126,7 +126,7 @@
             "slug": "is_strongly_regular",
             "displayName": "Is Strongly Regular",
             "codec": "StandardBool",
-            "description": "Do there exists $\lambda$ and $\mu$ such that every two adjacent vertices have $\lambda$ common neighbours and every two non-adjacent vertices have $\mu$ common neighbours."
+            "description": "Do there exists $\\lambda$ and $\\mu$ such that every two adjacent vertices have $\\lambda$ common neighbours and every two non-adjacent vertices have $\\mu$ common neighbours."
         },
         {
             "slug": "odd_girth",
