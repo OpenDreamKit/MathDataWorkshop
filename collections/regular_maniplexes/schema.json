@@ -49,8 +49,7 @@
         {
             "slug": "orientable",
             "displayName": "Orientable",
-            "codec": "StandardBool",
-            "description": ""
+            "codec": "StandardBool"
         },
         {
             "slug": "small_group_id",
