@@ -42,18 +42,21 @@
         {
             "slug": "n",
             "displayName": "Range",
-            "codec": "StandardInt"
+            "codec": "StandardInt",
+            "description": "Last consecutive nonnegative integer that is representable as a pairwise sum from the basis."
         },
         {
             "slug": "S",
             "displayName": "Symmetric",
             "codec": "StandardBool",
+            "description": "Is the basis symmetric around its midpoint $m/2$, where $m$ is its largest element.",
             "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt#L21"
         },
         {
             "slug": "R",
             "displayName": "Restricted",
             "codec": "StandardBool",
+            "description": "Are all basis elements less or equal to range/2.",
             "url": "https://gl.mathhub.info/MitM/smglom/blob/devel/source/numbertheory/additiveBases.mmt#L15"
         }
     ]
