@@ -52,20 +52,20 @@
         {
             "slug": "len",
             "displayName": "Length",
-            "codec": "StandardInt"
-            "description": "The length (height) of the lattice: that is, length of the longest chain from top to bottom."
+            "codec": "StandardInt",
+            "description": "Length of the longest chain from top to bottom."
         },
         {
             "slug": "ncoatom",
             "displayName": "Number of coatoms",
+            "codec": "StandardInt",
             "description": "The number of coatoms, that is, elements that are covered by the top."
-            "codec": "StandardInt"
         },
         {
             "slug": "natom",
             "displayName": "Number of atoms",
+            "codec": "StandardInt",
             "description": "The number of atoms, that is, elements that cover the bottom."
-            "codec": "StandardInt"
         },
         {
             "slug": "isgraded",
@@ -76,31 +76,31 @@
         {
             "slug": "issemi",
             "displayName": "Is semimodular",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
             "description": "Is it true that whenever two elements $x$, $y$ cover a common element $z$, they are in turn covered by an element $w$."
         },
         {
             "slug": "islower",
             "displayName": "Is lower semimodular",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
             "description": "Is it true that whenever two elements $x$, $y$ are covered by a common element $w$, they in turn cover an element $z$."
         },
         {
             "slug": "ismod",
             "displayName": "Is modular",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
             "description": "Is the lattice both semimodular and lower semimodular."
         },
         {
             "slug": "isatomistic",
             "displayName": "Atomistic",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
             "description": "Is every element representable as a join of some atoms."
         },
         {
             "slug": "isgeo",
             "displayName": "Is geometric",
-            "description": "Is the lattice both semimodular and atomistic."
+            "description": "Is the lattice both semimodular and atomistic.",
             "codec": "StandardBool"
         },
         {
@@ -111,7 +111,7 @@
         {
             "slug": "isdeco",
             "displayName": "Is vertically decomposable",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
             "description": "Is there a neck element $x$ that is distinct from top and bottom, and comparable to every element in the lattice."	    
         }
     ]
