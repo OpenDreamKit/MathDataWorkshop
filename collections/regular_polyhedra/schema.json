@@ -35,7 +35,7 @@
             "slug": "schlafli",
             "displayName": "Schläfli Symbol",
             "codec": "ListAsArray_StandardInt",
-            "description": "The Schläfli symbol is a recursive description of regular polytopes or maniplexes. A polytope with the symbol ${p,q,r,...,y,z}$ has $z$ ${p,q,r,...,y}$-facets."
+            "description": "The Schläfli symbol is a recursive description of regular polytopes or maniplexes. A polytope with the symbol ${p,q,r,...,y,z}$ has $z$ ${p,q,r,...,y}$-facets arranged around every face of codimension 3."
         },
         {
             "slug": "relators",
@@ -65,7 +65,7 @@
             "slug": "orientable",
             "displayName": "Orientable",
             "codec": "StandardBool",
-            "description": ""
+            "description": "Whether the polyhedron corresponds to a map on an orientable surface."
         },
         {
             "slug": "polytope",
@@ -97,17 +97,20 @@
         {
             "slug": "vertex_faithful",
             "displayName": "Vertex-faithful",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Whether the action of the automorphism group on vertices is faithful."
         },
         {
             "slug": "facet_faithful",
             "displayName": "Facet-faithful",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Whether the action of the automorphism group on facets is faithful."
         },
         {
             "slug": "degenerate",
             "displayName": "Degenerate",
-            "codec": "StandardBool"
+            "codec": "StandardBool",
+            "description": "Whether there are any sections that are digons."
         }
     ]
 }
